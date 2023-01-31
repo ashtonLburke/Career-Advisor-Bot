@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+ <category>
+    <pattern>*</pattern>
+    <template>Good Afternoon! Please tell me your name starting with "My name is..."</template>
+  </category>
+  
+  <category>
+      <pattern>MY NAME IS *</pattern>
+      <template>Hello, <set name="name"><star /></set>! I was programmed to give career advice! Is that something you would be interested in?</template>
+  </category>
+  
+  <category> 
+        <pattern>YES</pattern>
+        <that> IS THAT SOMETHING YOU WOULD BE INTERESTED IN</that>
+        <template>I will now prompt you with a set of questions.<br></br> What computer science subject would you say you are most interested in? If none of these subjects appeal to you, please reply with none.
+        <button> 
+            <text>Data</text>
+            <postback>Data</postback>
+        </button>
+         <button> 
+            <text>Algorithms</text>
+            <postback>Algorithms</postback>
+        </button>
+        <button> 
+            <text>Design</text>
+            <postback>Design</postback>
+        </button>
+        <button> 
+            <text>IT</text>
+            <postback>IT</postback>
+        </button>
+        </template>
+  </category>
+  
+   <category>
+      <pattern>NONE</pattern>
+      <template>You may be interested in the field of IT Services. IT Services is an incredibly broad field where many people find fantastic careers!
+      <button>
+            <text>Click here to learn more!</text>
+            <url>https://www.phdata.io/blog/what-is-data-engineering</url>
+        </button>
+        </template>
+  </category>
+  
+   <category>
+      <pattern>NO</pattern>
+      <that> IS THAT SOMETHING YOU WOULD BE INTERESTED IN</that>
+      <template>Goodbye.</template>
+  </category>
+  
+  
+    <category>
+        <pattern>DATA</pattern>
+        <template>Data engineering would be an excellent field for a computer science graduate with an interest in data!
+        <button>
+            <text>Click here to learn more!</text>
+            <url>https://www.phdata.io/blog/what-is-data-engineering</url>
+        </button>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>DESIGN</pattern>
+        <template>Front end development would be an excellent field for a computer science graduate with an interest in data!
+        <button>
+            <text>Click here to learn more!</text>
+            <url>https://www.coursera.org/articles/front-end-developer</url>
+        </button>
+        </template>
+    </category>
+    
+    <category> 
+        <pattern>ALGORITHMS</pattern>
+        <template>Which of these subjects are you most interested in?
+        <button> 
+            <text>Artificial Intelligence</text>
+            <postback>Artificial Intelligence</postback>
+        </button>
+         <button> 
+            <text>General Application Development</text>
+            <postback>General Application Development</postback>
+        </button>
+        
+        </template>
+  </category>
+    
+    <category>
+        <pattern>GENERAL APPLICATION DEVELOPMENT</pattern>
+        <template>Backend Engineering would be an excellent field for a computer science graduate with an interest in algorithms!
+        <button>
+            <text>Click here to learn more!</text>
+            <url>https://www.coursera.org/articles/back-end-developer</url>
+        </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>ARTIFICIAL INTELLIGENCE</pattern>
+        <template>Machine learning engineering would be an excellent field for a computer science graduate with an interest in algorithms!
+        <button>
+            <text>Click here to learn more!</text>
+            <url>https://www.coursera.org/articles/what-is-machine-learning-engineer</url>
+        </button>
+        </template>
+    </category>
+    
+</aiml>
